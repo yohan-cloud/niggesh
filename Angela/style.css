@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #fff0f5, #ffe4e1); /* Soft pink gradient */
+    background: linear-gradient(135deg, #fff0f5, #ffe4e1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,8 +9,6 @@ body {
     overflow: hidden;
     position: relative;
 }
-
-/* Animated soft floral circles for background effect */
 body::before, body::after {
     content: "";
     position: absolute;
@@ -28,12 +26,10 @@ body::after {
     right: 5%;
     animation-delay: 5s;
 }
-
 @keyframes float-bg {
     0% { transform: translate(0, 0) scale(1); }
     100% { transform: translate(50px, 30px) scale(1.2); }
 }
-
 /* Envelope */
 .envelope-container {
     position: relative;
@@ -79,7 +75,6 @@ body::after {
     font-size: 28px;
     color: #e91e63;
 }
-
 /* Letter Wrapper */
 .letter-wrapper {
     position: fixed;
@@ -98,7 +93,6 @@ body::after {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
-
 /* Big Letter */
 .letter-big {
     width: 80%;
@@ -116,13 +110,8 @@ body::after {
     margin: 0 0 20px;
     font-size: 32px;
 }
-
-/* Flowers */
 .flower { width: 90px; }
-
-/* Hide envelope when opened */
 .hide-envelope { transform: scale(0); }
-
 /* Floating hearts */
 .floating-heart {
     position: absolute;
@@ -135,7 +124,6 @@ body::after {
     0% { transform: translateY(0) scale(1); opacity: 1; }
     100% { transform: translateY(-400px) scale(1.5); opacity: 0; }
 }
-
 /* Side Photos */
 .side-photo {
     width: 140px;
@@ -148,7 +136,6 @@ body::after {
 }
 .side-left { margin-right: 15px; transform: rotate(-8deg); }
 .side-right { margin-left: 15px; transform: rotate(8deg); }
-
 /* Confetti Canvas */
 #confetti-canvas {
     position: fixed;
