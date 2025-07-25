@@ -1,22 +1,18 @@
 function openEnvelope() {
-    // Hide envelope
     document.querySelector('.envelope-container').classList.add('hide-envelope');
-
-    // Show letter
     const letterWrapper = document.querySelector('.letter-wrapper');
     letterWrapper.classList.add('show-letter');
-
-    // Play music
     const song = document.getElementById('song');
-    if (song) {
-        song.play().catch(() => console.log("Autoplay blocked"));
-    }
-
-    // Start hearts and confetti
+    if (song) song.play().catch(() => console.log("Autoplay blocked"));
     startHearts();
     startConfetti();
-    setTimeout(stopConfetti, 5000); // Confetti stops after 5s
+    setTimeout(stopConfetti, 5000);
 }
+
+document.addEventListener('click', () => {
+    const song = document.getElementById('song');
+    if (song.paused) song.play();
+});
 
 function startHearts() {
     const heartContainer = document.getElementById('floating-hearts');
@@ -35,7 +31,6 @@ function startHearts() {
     }, 300);
 }
 
-/* Confetti Animation */
 let confetti;
 function startConfetti() {
     const canvas = document.getElementById('confetti-canvas');
